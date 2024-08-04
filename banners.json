@@ -1,0 +1,100 @@
+{
+   "banners" : [
+      {
+         "id" : 1,
+         "title" : "Title 1",
+         "description" : "This is the description of banner 1",
+         "buttonText": "Learn More",
+         "images": [],
+         "templateId": "5"
+      },
+      {
+         "id": 2,
+         "title": "Title 2",
+         "description": "This is the description of banner 2",
+         "buttonText": "Learn More",
+         "images": [],
+         "templateId": "9"
+      },
+      {
+         "id": 3,
+         "title": "Title 3",
+         "description": "This is the description of banner 3",
+         "buttonText": "Shop Now",
+         "images": [],
+         "templateId": "1"
+      },
+      {
+         "id": 4,
+         "title": "Title 4",
+         "description": "This is the description of banner 4",
+         "buttonText": "Get Started",
+         "images": [],
+         "templateId": "15"
+      },
+      {
+         "id": 5,
+         "title": "Title 5",
+         "description": "This is the description of banner 5",
+         "buttonText": "Discover",
+         "images": [],
+         "templateId": "5"
+      },
+      {
+         "id": 6,
+         "title": "Title 6",
+         "description": "This is the description of banner 6",
+         "buttonText": "Explore",
+         "images": [],
+         "templateId": "9"
+      },
+      {
+         "id": 7,
+         "title": "Title 7",
+         "description": "This is the description of banner 7",
+         "buttonText": "Sign Up",
+         "images": [],
+         "templateId": "1"
+      },
+      {
+         "id": 8,
+         "title": "Title 8",
+         "description": "This is the description of banner 8",
+         "buttonText": "Join Now",
+         "images": [],
+         "templateId": "15"
+      },
+      {
+         "id": 9,
+         "title": "Title 9",
+         "description": "This is the description of banner 9",
+         "buttonText": "Find Out More",
+         "images": [],
+         "templateId": "5"
+      },
+      {
+         "id": 10,
+         "title": "Title 10",
+         "description": "This is the description of banner 10",
+         "buttonText": "Sign In",
+         "images": [],
+         "templateId": "9"
+      },
+      {
+         "id": 11,
+         "title": "Title 11",
+         "description": "This is the description of banner 11",
+         "buttonText": "Learn More",
+         "images": [],
+         "templateId": "1"
+      },
+      {
+         "id": 12,
+         "title": "Title 12",
+         "description": "This is the description of banner 12",
+         "buttonText": "Start Now",
+         "images": [],
+         "templateId": "15"
+      }
+   ]
+}
