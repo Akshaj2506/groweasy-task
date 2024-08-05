@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "initialize": "json-server --watch banners.json --port 8000 && next build && next start"
+    "initialize": "next build && next start"
   },
   "dependencies": {
     "@types/react-bootstrap": "^0.32.37",
