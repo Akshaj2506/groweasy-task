@@ -61,7 +61,8 @@ const Banner: React.FC<Banner> = ({
 
           // Draw the button text
           ctx.font = "80px Arial";
-          ctx.fillStyle = "white";
+          if (parseInt(templateId) == 1 || parseInt(templateId) == 15) ctx.fillStyle = "black";
+          else ctx.fillStyle = "white";
           ctx.fillText(banner.buttonText, canvas.width / 2, canvas.height - 50);
         };
         bgImg.onerror = () => {
