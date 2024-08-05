@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React, { useEffect, useRef } from "react";
 
@@ -7,7 +8,7 @@ interface Banner {
   description: string;
   images: string[];
   buttonText: string;
-  templateId: number;
+  templateId: string;
 }
 
 const Banner: React.FC<Banner> = ({
@@ -33,17 +34,31 @@ const Banner: React.FC<Banner> = ({
         bgImg.onload = () => {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
           ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
-          ctx.font = "140px Roboto";
-          ctx.fillStyle = "black";
+          ctx.font = "140px Calibri";
+          switch (parseInt(templateId)) {
+            case 5:
+              ctx.fillStyle = "white";
+              break;
+            case 9:
+              ctx.fillStyle = "white";
+              break;
+            case 1:
+              ctx.fillStyle = "orange";
+              break;
+            case 15:
+              ctx.fillStyle = "black";
+              break;
+          }
           ctx.textAlign = "center";
-  
+
           // Draw the title
-          ctx.fillText(banner.title, canvas.width / 2, 100);
-  
+          ctx.fillText(banner.title, canvas.width / 2, 300);
+
           // Draw the description
           ctx.font = "70px Arial";
-          ctx.fillText(banner.description, canvas.width / 2, 150);
-  
+          if (parseInt(templateId) == 1) ctx.fillText(banner.description, canvas.width / 2, 480);
+          else ctx.fillText(banner.description, canvas.width / 2, 450);
+
           // Draw the button text
           ctx.font = "80px Arial";
           ctx.fillStyle = "white";
@@ -73,7 +88,7 @@ const Banner: React.FC<Banner> = ({
         }
       }
     }
-  }, [id, title, description, images, buttonText, templateId]);
+  }, [id, title, description, images, buttonText, templateId, populateBanner]);
   return (
     <>
       <div className="banner-holder">
