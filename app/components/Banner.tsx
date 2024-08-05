@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React, { useEffect, useRef } from "react";
+import {FaPencilAlt} from "react-icons/fa"
 
 interface Banner {
   id: number;
@@ -20,6 +21,7 @@ const Banner: React.FC<Banner> = ({
   templateId,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isModal, setIsModal] = React.useState<boolean>(false)
 
   const populateBanner = (
     canvas: HTMLCanvasElement | null,
@@ -92,7 +94,7 @@ const Banner: React.FC<Banner> = ({
   }, [id, title, description, images, buttonText, templateId, populateBanner]);
   return (
     <>
-      <div className="banner-holder">
+      <div className="banner-holder relative">
         <canvas
           ref={canvasRef}
           id="banner-canvas"
@@ -100,6 +102,11 @@ const Banner: React.FC<Banner> = ({
           width={1080}
           height={1080}
         ></canvas>
+        <div id="edit-container" className="absolute top-0 w-full h-full">
+          <div className="button-container absolute right-1 top-1 w-fit">
+            <button className="bg-white p-1.5 rounded-3xl"><FaPencilAlt className="fill-black"/></button>
+          </div>
+        </div>
       </div>
     </>
   );
