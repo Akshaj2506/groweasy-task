@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button-container {
+   opacity: 0;
+   transition: all ease 0.5s ;
+}
+
+.banner-holder:hover .button-container {
+   opacity: 1;
+}
